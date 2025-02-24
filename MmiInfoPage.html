@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<!-- Make "viewport" objects -->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    font-family: "Verdana";
+  }
+  #MainText {
+    width: 80%;
+    padding: 20px 20px;
+    text-align: left;
+    background-color: White;
+    margin-top: 20px;
+  }
+  #Links {
+    width: 20%;
+    padding: 20px 20px;
+    text-align: center;
+    background-color: LightSeaGreen;
+    margin-top: 20px;
+  }
+  </style>
+</head>
+
+
+<body style="background-color:SteelBlue;">
+  <center>
+    <!-- Page title -->
+    <h1> Mood and Motivation Tasks</h1>
+    <!-- Main consent text -->
+    <div id="MainText">
+      <p>
+        Welcome to the <b>Mood and Motivations Tasks</b>, web-based tasks that examine decision-making and rewards. Before taking part in this National Institutes of Health (NIH) research study, please read the script below and click on the "I Agree" button at the bottom of the page if you understand the statements and freely agree to participate in the study.
+        <br><br>
+        This study involves web-based tasks designed to learn about decision-making in the context of winning and losing. The study involves no more than minimal risk to participants (i.e., the level of risk encountered in daily life). Participation in this test approximately 90 minutes and is strictly confidential.
+        <br><br>
+        The study has two (2) parts.
+        <br><br>
+        In the first part of the study, you will be asked to perform two tasks.  These tasks involve decision-making and at times during the tasks you will be asked to rate your mood.  Performing both tasks takes roughly 60 min. Images, digits, or letters will be presented on the monitor and you will have to respond to them as instructed. The tasks are relatively easy. They will be carefully explained to you and you will be given an opportunity to practice before doing the tasks. This experiment does not allow for you to take a break; once you start you cannot pause the tasks. Please make sure you have at least 60 minutes to complete both tasks before you start. You will need to complete these tasks within that 60-minute time.
+        <br><br>
+        In the second part of the study, you will be asked questions about your age, sex, and work/education level.  This is followed by 5 questionnaires about your mood and anxiety feelings and how much enjoyment you are having in your day-to-day activities in general. There are 87 questions total for all these questionnaires and answering all of them takes roughly 30 min.
+        <br><br>
+        All responses will be treated as confidential, and in no case will responses from individual participants be identified in any manuscripts or presentations. Rather, all data will be pooled in aggregate form only. You should be aware, however, that the experiment is not being run from a "secure" https server of the kind typically used to handle credit card transactions, so there is a small possibility that responses could be viewed by unauthorized third parties (e.g., computer hackers). Your Mechanical Turk Worker ID will be used to distribute payment to you, but NIH will not store your ID with your survey responses or data. Please be aware that your MTurk Worker ID can potentially be linked to information about you on your Amazon public profile page, depending on the settings you have for your Amazon profile. NIH will not have any access to your personal identifiers nor will we attempt to access any personally identifying information about you that you may have put on your Amazon public profile page.
+        <br><br>
+        Participation is voluntary. Your refusal to take part in the study will not result in any penalty or loss of benefits to which you are otherwise entitled. You will be paid $8 for completion of the study and winnings of around $3 (in the range of $1-$6) based on your performance. You may stop participating in the study at any time. However, since MTurk allows us to view only fully completed studies, we will be unable to compensate you if you do not complete both tasks.
+        <br><br>
+        If you have questions or concerns at any time you may contact a member of the study team, Katy Chang on <a href="mailto:katy.chang@nih.gov">katy.chang@nih.gov</a>, 301 402 8188.
+        <br><br>
+        <b>If you are 18 years of age or older, understand the statements above, and freely consent to participate in the study, click on the "I Agree" button to begin the experiment.</b>
+      </p>
+
+      <!-- Response buttons -->
+      <p>
+        <center>
+          <button onclick="agreeFunction()">I AGREE</button>
+          <button onclick="disagreeFunction()">I DO NOT AGREE</button>
+        </center>
+      </p>
+    </div>
+
+    <!-- Message displayed if they disagree-->
+    <div id="Goodbye">
+      <p>
+        You have declined to participate. Thank you for your response. Have a nice day!
+      </p>
+    </div>
+
+    <!-- Links -->
+    <div id="Links">
+      <b>Links to Task and Survey:</b>
+      <br>
+      <i>(click to open in new tab)</i>
+      <br><br>
+      <b>REMEMBER TO ENTER THE PARTICIPANT ID FROM YOUR MTURK HIT.<b>
+      <p>
+        <a href="https://pavlovia.org/run/djangraw/mmi-3level/html/" target="_blank">Task Link</a>
+        <br><br>
+        <a href="https://pavlovia.org/run/djangraw/mmi-survey-task/html/" target="_blank">Survey Link</a>
+      </p>
+    </div>
+  </center>
+<script>
+<!-- Hide Links and Goodbye Message until they respond -->
+document.getElementById("Links").style.display = "none";
+document.getElementById("Goodbye").style.display = "none";
+
+<!-- If they agree, show the links -->
+function agreeFunction() {
+  document.getElementById("Links").style.display = "block";
+}
+<!-- If they disagree, show the goodbye message and hide the rest-->
+function disagreeFunction() {
+  document.getElementById("Goodbye").style.display = "block";
+  document.getElementById("MainText").style.display = "none";
+  document.getElementById("Links").style.display = "none";
+}
+</script>
+
+</body>
+</html>
