@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知情同意书</title>
+</head>
+<body>
+    <h2>知情同意书</h2>
+    <p>感谢您参加本实验。在您开始之前，请阅读以下知情同意书。</p>
+    <p>本研究旨在研究人类认知，所有数据将被匿名存储，仅用于科研目的...</p>
+    <p>如果您同意参加本研究，请点击“同意”按钮，您将进入实验页面；如果您不同意，请点击“不同意”。</p>
+
+    <button onclick="agree()">同意</button>
+    <button onclick="disagree()">不同意</button>
+
+    <script>
+        function agree() {
+            window.location.href = "https://your-experiment-link.com";  // 替换为您的实验链接
+        }
+
+        function disagree() {
+            alert("感谢您的兴趣和耐心！如有任何疑问，请联系我们。");
+        }
+    </script>
+</body>
+</html>
